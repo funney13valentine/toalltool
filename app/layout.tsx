@@ -1,18 +1,19 @@
 import type { Metadata, Viewport } from "next";
-import { Fredoka, Nunito } from "next/font/google";
+import { Pirata_One, Cinzel } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import "./globals.css";
 
-const fredoka = Fredoka({
+const pirataOne = Pirata_One({
   subsets: ["latin"],
-  variable: "--font-fredoka",
+  weight: "400",
+  variable: "--font-pirata",
   display: "swap",
 });
 
-const nunito = Nunito({
+const cinzel = Cinzel({
   subsets: ["latin"],
-  variable: "--font-nunito",
+  variable: "--font-cinzel",
   display: "swap",
 });
 
@@ -25,11 +26,11 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#14B8A6" };
+export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#09070f" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${fredoka.variable} ${nunito.variable}`}>
+    <html lang="en" className={`${pirataOne.variable} ${cinzel.variable}`}>
       <body className="page-bg flex min-h-screen flex-col">
         <Header />
         {children}

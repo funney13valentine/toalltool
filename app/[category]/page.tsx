@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import ToolCard from "@/components/ToolCard";
 import { categories, getCategoryBySlug, getSubcategories, getToolsByCategory } from "@/data/tools";
-import { getCategoryAccent } from "@/lib/playful";
 
 type Props = { params: Promise<{ category: string }> };
 
@@ -33,35 +32,46 @@ export default async function CategoryPage({ params }: Props) {
   const categoryTools = getToolsByCategory(category.id);
   const subcategories = getSubcategories(category.id);
   const categoryIndex = categories.findIndex((item) => item.id === category.id);
-  const accent = getCategoryAccent(categoryIndex);
+
+  // Subtle colored gothic glows and borders for each card index to maintain the playful variety!
+  const gothicAccents = [
+    { text: "text-purple-400", border: "border-purple-900/40", hoverBorder: "group-hover:border-purple-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]", bg: "bg-purple-950/20" },
+    { text: "text-fuchsia-400", border: "border-fuchsia-900/40", hoverBorder: "group-hover:border-fuchsia-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(217,70,239,0.15)]", bg: "bg-fuchsia-950/20" },
+    { text: "text-rose-400", border: "border-rose-900/40", hoverBorder: "group-hover:border-rose-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(244,63,94,0.15)]", bg: "bg-rose-950/20" },
+    { text: "text-indigo-400", border: "border-indigo-900/40", hoverBorder: "group-hover:border-indigo-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(99,102,241,0.15)]", bg: "bg-indigo-950/20" },
+    { text: "text-violet-400", border: "border-violet-900/40", hoverBorder: "group-hover:border-violet-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(109,40,217,0.15)]", bg: "bg-violet-950/20" },
+    { text: "text-red-400", border: "border-red-900/40", hoverBorder: "group-hover:border-red-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(239,68,68,0.15)]", bg: "bg-red-950/20" },
+  ];
+  
+  const accent = gothicAccents[categoryIndex % gothicAccents.length];
 
   return (
     <main>
-      <section className="relative overflow-hidden border-b border-slate-200/60 bg-white/60 px-5 py-10 backdrop-blur-sm sm:px-6 sm:py-14">
-        <div className="absolute -right-8 -top-8 text-7xl opacity-[0.04] animate-wobble" aria-hidden="true">
+      <section className="relative overflow-hidden border-b border-gothic-border/60 bg-gothic-card/40 px-5 py-10 backdrop-blur-sm sm:px-6 sm:py-14">
+        <div className="absolute -right-8 -top-8 text-7xl opacity-[0.08] animate-wobble" aria-hidden="true">
           {category.icon}
         </div>
         <div className="relative mx-auto max-w-[1200px]">
-          <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-sm text-slate-500">
-            <Link href="/" className="font-medium transition hover:text-teal-600">
+          <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-sm text-slate-400">
+            <Link href="/" className="font-medium transition hover:text-gothic-purple">
               Home
             </Link>
             <span aria-hidden="true">/</span>
-            <span className="font-medium text-slate-700">{category.name}</span>
+            <span className="font-medium text-slate-200">{category.name}</span>
           </nav>
           <div className="flex items-start gap-4">
             <div
-              className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border ${accent.border} ${accent.bg} text-3xl`}
+              className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border ${accent.border} ${accent.bg} ${accent.text} text-3xl`}
               aria-hidden="true"
             >
               {category.icon}
             </div>
             <div>
-              <p className="text-sm font-bold uppercase tracking-wider text-teal-600">Tool directory</p>
-              <h1 className="font-display mt-1 text-3xl font-extrabold tracking-tight text-slate-800 sm:text-4xl">
+              <p className="text-sm font-bold uppercase tracking-wider text-gothic-purple">Tool directory</p>
+              <h1 className="font-display mt-1 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
                 {category.name}
               </h1>
-              <p className="mt-3 max-w-2xl leading-7 text-slate-500">
+              <p className="mt-3 max-w-2xl leading-7 text-slate-400">
                 {category.description} Explore {categoryTools.length} carefully selected tools across{' '}
                 {subcategories.length} subcategories.
               </p>
@@ -77,12 +87,12 @@ export default async function CategoryPage({ params }: Props) {
             <section key={subcategory} className={index ? "mt-16" : ""} aria-labelledby={`subcategory-${index}`}>
               <div className="mb-6 flex items-end justify-between gap-4">
                 <div>
-                  <p className="text-sm font-bold text-teal-600">{subcategoryTools.length} tools</p>
-                  <h2 id={`subcategory-${index}`} className="font-display mt-1 text-2xl font-extrabold tracking-tight text-slate-800">
+                  <p className="text-sm font-bold text-gothic-purple">{subcategoryTools.length} tools</p>
+                  <h2 id={`subcategory-${index}`} className="font-display mt-1 text-2xl font-extrabold tracking-tight text-white">
                     {subcategory}
                   </h2>
                 </div>
-                <span className="hidden text-sm font-medium text-slate-400 sm:block">Compare and choose with confidence</span>
+                <span className="hidden text-sm font-medium text-slate-500 sm:block">Compare and choose with confidence</span>
               </div>
               <div className="grid gap-5 lg:grid-cols-2">
                 {subcategoryTools.map((tool) => (

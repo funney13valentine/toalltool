@@ -23,18 +23,18 @@ export const CTA_TEXTS = ["Let's Go!", "Take Me There", "Send Me!", "Go Go Go!",
 export const TOOL_EMOJIS = ["🚀", "✨", "🎯", "⚡", "🔥", "💫", "🎨", "🛠️", "📎", "🌟", "🎲", "💡", "🔧", "📌", "🧩"] as const;
 
 export const HEADER_TAGLINES = [
-  "Tools that actually help",
+  "Summon tools that actually help",
   "No more tab chaos",
-  "Your tool playground",
+  "Your gothic tool sanctuary",
   "Stop googling, start finding",
-  "Curated, not cluttered",
+  "Curated grimoires, not clutter",
 ] as const;
 
 export const SEARCH_PLACEHOLDERS = [
-  "what tool do you need...",
-  "search categories...",
+  "which grimoire do you seek...",
+  "search gothic archives...",
   "find something useful...",
-  "hunt for the right tool",
+  "summon the right tool",
   "type to explore...",
 ] as const;
 

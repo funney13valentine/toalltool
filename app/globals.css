@@ -1,17 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-teal-vibrant: #14b8a6;
-  --color-accent: #f97316;
-  --color-cream: #f5f3ef;
-  --font-display: var(--font-fredoka), system-ui, sans-serif;
-  --font-body: var(--font-nunito), system-ui, sans-serif;
+  --color-gothic-dark: #09070f;
+  --color-gothic-card: #120f1d;
+  --color-gothic-border: #2d224d;
+  --color-gothic-purple: #8b5cf6;
+  --color-gothic-accent: #a78bfa;
+  --color-gothic-magenta: #ec4899;
+  --font-display: var(--font-pirata), system-ui, sans-serif;
+  --font-body: var(--font-cinzel), Georgia, serif;
 }
 
 :root {
-  --background: #f5f3ef;
-  --foreground: #1e293b;
-  --accent: #14b8a6;
+  --background: #09070f;
+  --foreground: #e2e8f0;
+  --accent: #8b5cf6;
 }
 
 * {
@@ -28,9 +31,25 @@ body {
   font-family: var(--font-body);
 }
 
+/* Custom gothic scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #09070f;
+}
+::-webkit-scrollbar-thumb {
+  background: #2d224d;
+  border: 2px solid #09070f;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8b5cf6;
+}
+
 ::selection {
-  background: #99f6e4;
-  color: #134e4a;
+  background: #4c1d95;
+  color: #ffffff;
 }
 
 a {
@@ -42,12 +61,12 @@ a {
 }
 
 .page-bg {
-  background-color: #f5f3ef;
+  background-color: #09070f;
   background-image:
-    radial-gradient(circle at 12% 18%, rgba(20, 184, 166, 0.09) 0%, transparent 42%),
-    radial-gradient(circle at 88% 12%, rgba(249, 115, 22, 0.07) 0%, transparent 38%),
-    radial-gradient(circle at 72% 82%, rgba(99, 102, 241, 0.06) 0%, transparent 40%),
-    radial-gradient(circle at 28% 78%, rgba(236, 72, 153, 0.05) 0%, transparent 35%);
+    radial-gradient(circle at 12% 18%, rgba(139, 92, 246, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 88% 12%, rgba(236, 72, 153, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 72% 82%, rgba(76, 29, 149, 0.2) 0%, transparent 45%),
+    radial-gradient(circle at 28% 78%, rgba(220, 38, 38, 0.05) 0%, transparent 35%);
 }
 
 @keyframes float {
@@ -84,9 +103,11 @@ a {
   0%,
   100% {
     opacity: 1;
+    filter: drop-shadow(0 0 2px rgba(139, 92, 246, 0.3));
   }
   50% {
     opacity: 0.75;
+    filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.8));
   }
 }
 
@@ -156,11 +177,11 @@ a {
 }
 
 .card-shadow {
-  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.05);
 }
 
 .card-shadow-hover:hover {
-  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.1);
+  box-shadow: 0 10px 40px rgba(139, 92, 246, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.1);
 }
 
 @media (prefers-reduced-motion: reduce) {
