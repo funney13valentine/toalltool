@@ -1,9 +1,176 @@
 @import "tailwindcss";
 
-:root { --background: #ffffff; --foreground: #1f2937; }
+@theme {
+  --color-teal-vibrant: #14b8a6;
+  --color-accent: #f97316;
+  --color-cream: #f5f3ef;
+  --font-display: var(--font-fredoka), system-ui, sans-serif;
+  --font-body: var(--font-nunito), system-ui, sans-serif;
+}
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { background: var(--background); color: var(--foreground); font-family: Arial, Helvetica, sans-serif; }
-::selection { background: #99f6e4; color: #134e4a; }
-a { text-decoration: none; }
+:root {
+  --background: #f5f3ef;
+  --foreground: #1e293b;
+  --accent: #14b8a6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: #99f6e4;
+  color: #134e4a;
+}
+
+a {
+  text-decoration: none;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.page-bg {
+  background-color: #f5f3ef;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(20, 184, 166, 0.09) 0%, transparent 42%),
+    radial-gradient(circle at 88% 12%, rgba(249, 115, 22, 0.07) 0%, transparent 38%),
+    radial-gradient(circle at 72% 82%, rgba(99, 102, 241, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 28% 78%, rgba(236, 72, 153, 0.05) 0%, transparent 35%);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+@keyframes wobble {
+  0%,
+  100% {
+    transform: rotate(-1.5deg) scale(1);
+  }
+  50% {
+    transform: rotate(1.5deg) scale(1.03);
+  }
+}
+
+@keyframes bounce-pop {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.75;
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes blob-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(12px, -18px) scale(1.05);
+  }
+  66% {
+    transform: translate(-8px, 10px) scale(0.97);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-wobble {
+  animation: wobble 3s ease-in-out infinite;
+}
+
+.animate-bounce-pop {
+  animation: bounce-pop 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 10s ease infinite;
+}
+
+.animate-blob {
+  animation: blob-drift 12s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.45s ease-out both;
+}
+
+.card-shadow {
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+}
+
+.card-shadow-hover:hover {
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-wobble,
+  .animate-bounce-pop,
+  .animate-shimmer,
+  .animate-gradient,
+  .animate-blob,
+  .animate-slide-up {
+    animation: none;
+  }
+}

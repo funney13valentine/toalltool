@@ -1,7 +1,20 @@
 import type { Metadata, Viewport } from "next";
+import { Fredoka, Nunito } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import "./globals.css";
+
+const fredoka = Fredoka({
+  subsets: ["latin"],
+  variable: "--font-fredoka",
+  display: "swap",
+});
+
+const nunito = Nunito({
+  subsets: ["latin"],
+  variable: "--font-nunito",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://toalltool.com"),
@@ -15,5 +28,13 @@ export const metadata: Metadata = {
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#14B8A6" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body className="flex min-h-screen flex-col"><Header />{children}<Footer /></body></html>;
+  return (
+    <html lang="en" className={`${fredoka.variable} ${nunito.variable}`}>
+      <body className="page-bg flex min-h-screen flex-col">
+        <Header />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  );
 }
