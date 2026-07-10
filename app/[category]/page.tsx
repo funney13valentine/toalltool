@@ -35,12 +35,12 @@ export default async function CategoryPage({ params }: Props) {
 
   // Subtle colored gothic glows and borders for each card index to maintain the playful variety!
   const gothicAccents = [
-    { text: "text-purple-400", border: "border-purple-900/40", hoverBorder: "group-hover:border-purple-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]", bg: "bg-purple-950/20" },
-    { text: "text-fuchsia-400", border: "border-fuchsia-900/40", hoverBorder: "group-hover:border-fuchsia-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(217,70,239,0.15)]", bg: "bg-fuchsia-950/20" },
-    { text: "text-rose-400", border: "border-rose-900/40", hoverBorder: "group-hover:border-rose-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(244,63,94,0.15)]", bg: "bg-rose-950/20" },
-    { text: "text-indigo-400", border: "border-indigo-900/40", hoverBorder: "group-hover:border-indigo-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(99,102,241,0.15)]", bg: "bg-indigo-950/20" },
-    { text: "text-violet-400", border: "border-violet-900/40", hoverBorder: "group-hover:border-violet-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(109,40,217,0.15)]", bg: "bg-violet-950/20" },
     { text: "text-red-400", border: "border-red-900/40", hoverBorder: "group-hover:border-red-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(239,68,68,0.15)]", bg: "bg-red-950/20" },
+    { text: "text-rose-400", border: "border-rose-900/40", hoverBorder: "group-hover:border-rose-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(244,63,94,0.15)]", bg: "bg-rose-950/20" },
+    { text: "text-orange-400", border: "border-orange-900/40", hoverBorder: "group-hover:border-orange-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(249,115,22,0.15)]", bg: "bg-orange-950/20" },
+    { text: "text-amber-400", border: "border-amber-900/40", hoverBorder: "group-hover:border-amber-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(245,158,11,0.15)]", bg: "bg-amber-950/20" },
+    { text: "text-pink-400", border: "border-pink-900/40", hoverBorder: "group-hover:border-pink-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(236,72,153,0.15)]", bg: "bg-pink-950/20" },
+    { text: "text-emerald-400", border: "border-emerald-900/40", hoverBorder: "group-hover:border-emerald-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(16,185,129,0.15)]", bg: "bg-emerald-950/20" },
   ];
   
   const accent = gothicAccents[categoryIndex % gothicAccents.length];
@@ -53,7 +53,7 @@ export default async function CategoryPage({ params }: Props) {
         </div>
         <div className="relative mx-auto max-w-[1200px]">
           <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-sm text-slate-400">
-            <Link href="/" className="font-medium transition hover:text-gothic-purple">
+            <Link href="/" className="font-medium transition hover:text-gothic-crimson">
               Home
             </Link>
             <span aria-hidden="true">/</span>
@@ -67,7 +67,7 @@ export default async function CategoryPage({ params }: Props) {
               {category.icon}
             </div>
             <div>
-              <p className="text-sm font-bold uppercase tracking-wider text-gothic-purple">Tool directory</p>
+              <p className="text-sm font-bold uppercase tracking-wider text-gothic-crimson">Tool directory</p>
               <h1 className="font-display mt-1 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
                 {category.name}
               </h1>
@@ -87,7 +87,7 @@ export default async function CategoryPage({ params }: Props) {
             <section key={subcategory} className={index ? "mt-16" : ""} aria-labelledby={`subcategory-${index}`}>
               <div className="mb-6 flex items-end justify-between gap-4">
                 <div>
-                  <p className="text-sm font-bold text-gothic-purple">{subcategoryTools.length} tools</p>
+                  <p className="text-sm font-bold text-gothic-crimson">{subcategoryTools.length} tools</p>
                   <h2 id={`subcategory-${index}`} className="font-display mt-1 text-2xl font-extrabold tracking-tight text-white">
                     {subcategory}
                   </h2>

@@ -18,13 +18,13 @@ export default function HomeContent({ categories, toolCounts }: { categories: Ca
   return (
     <main>
       <section className="relative min-h-[calc(100vh-80px)] flex flex-col justify-center overflow-hidden border-b border-gothic-border/60 px-5 pb-20 pt-14 sm:px-6 sm:pb-24 sm:pt-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-gothic-dark via-[#0f0b18] to-[#1a0f2c]" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-br from-gothic-dark via-[#120707] to-[#1f090d]" aria-hidden="true" />
         <div
-          className="animate-blob absolute -left-20 top-10 h-64 w-64 rounded-full bg-gothic-purple/10 blur-3xl"
+          className="animate-blob absolute -left-20 top-10 h-64 w-64 rounded-full bg-gothic-crimson/10 blur-3xl"
           aria-hidden="true"
         />
         <div
-          className="animate-blob absolute -right-16 bottom-0 h-72 w-72 rounded-full bg-gothic-magenta/5 blur-3xl"
+          className="animate-blob absolute -right-16 bottom-0 h-72 w-72 rounded-full bg-gothic-rose/5 blur-3xl"
           style={{ animationDelay: "-4s" }}
           aria-hidden="true"
         />
@@ -53,7 +53,7 @@ export default function HomeContent({ categories, toolCounts }: { categories: Ca
           {/* Logo Slot */}
           <div
             id="hero-logo-slot"
-            className="relative mb-6 h-40 w-40 sm:h-52 sm:w-52 md:h-64 md:w-64 lg:h-72 lg:w-72 filter drop-shadow-[0_0_20px_rgba(139,92,246,0.2)]"
+            className="relative mb-6 h-40 w-40 sm:h-52 sm:w-52 md:h-64 md:w-64 lg:h-72 lg:w-72 filter drop-shadow-[0_0_20px_rgba(220,38,38,0.2)]"
           >
             <Image
               src="/logo.png"
@@ -72,13 +72,13 @@ export default function HomeContent({ categories, toolCounts }: { categories: Ca
               id="hero-text-slot"
               className="font-display font-extrabold tracking-tight text-white leading-none text-center select-none text-[60px] sm:text-[100px] md:text-[150px] lg:text-[200px]"
             >
-              ToAll<span className="text-gothic-purple drop-shadow-[0_0_15px_#8b5cf6]">Tool</span>
+              ToAll<span className="text-gothic-crimson drop-shadow-[0_0_15px_#dc2626]">Tool</span>
             </span>
           </div>
 
           {/* Rest of Hero Details */}
           <div className="mt-4 w-full animate-slide-up max-w-[700px] px-4">
-            <p className="font-display mb-4 inline-block rounded-full border border-gothic-border/60 bg-gothic-card/70 px-4 py-1.5 text-xs font-bold text-gothic-accent backdrop-blur-sm sm:text-sm tracking-wider uppercase shadow-[0_0_15px_rgba(139,92,246,0.1)]">
+            <p className="font-display mb-4 inline-block rounded-full border border-gothic-border/60 bg-gothic-card/70 px-4 py-1.5 text-xs font-bold text-gothic-accent backdrop-blur-sm sm:text-sm tracking-wider uppercase shadow-[0_0_15px_rgba(220,38,38,0.1)]">
               🔮 your curated tools sanctuary
             </p>
             <p className="mx-auto text-pretty text-base font-semibold leading-7 text-slate-300 sm:text-lg">
@@ -91,8 +91,8 @@ export default function HomeContent({ categories, toolCounts }: { categories: Ca
               <label htmlFor="tool-search" className="sr-only">
                 Search categories
               </label>
-              <div className="group flex items-center gap-3 rounded-2xl border border-gothic-border/60 bg-gothic-card/85 p-2 shadow-2xl shadow-black/85 backdrop-blur-md transition-all duration-300 focus-within:scale-[1.02] focus-within:border-gothic-purple/80 focus-within:shadow-[0_0_20px_rgba(139,92,246,0.3)]">
-                <span className="ml-3 text-xl filter drop-shadow-[0_0_5px_rgba(139,92,246,0.5)]" aria-hidden="true">
+              <div className="group flex items-center gap-3 rounded-2xl border border-gothic-border/60 bg-gothic-card/85 p-2 shadow-2xl shadow-black/85 backdrop-blur-md transition-all duration-300 focus-within:scale-[1.02] focus-within:border-gothic-crimson/80 focus-within:shadow-[0_0_20px_rgba(220,38,38,0.3)]">
+                <span className="ml-3 text-xl filter drop-shadow-[0_0_5px_rgba(220,38,38,0.5)]" aria-hidden="true">
                   🔍
                 </span>
                 <input
@@ -106,7 +106,7 @@ export default function HomeContent({ categories, toolCounts }: { categories: Ca
                   <button
                     type="button"
                     onClick={() => setQuery("")}
-                    className="mr-2 rounded-full bg-slate-800 px-3 py-1.5 text-sm font-bold text-slate-300 transition hover:scale-110 hover:bg-gothic-purple hover:text-white"
+                    className="mr-2 rounded-full bg-slate-800 px-3 py-1.5 text-sm font-bold text-slate-300 transition hover:scale-110 hover:bg-gothic-crimson hover:text-white"
                     aria-label="Clear search"
                   >
                     ✕
@@ -120,9 +120,9 @@ export default function HomeContent({ categories, toolCounts }: { categories: Ca
 
       <section className="mx-auto max-w-[1200px] px-5 py-16 sm:px-6 sm:py-20">
         <div className="mb-10 flex flex-col gap-2 sm:mb-12">
-          <p className="text-sm font-bold uppercase tracking-widest text-gothic-purple drop-shadow-[0_0_5px_rgba(139,92,246,0.3)]">Browse the archives</p>
+          <p className="text-sm font-bold uppercase tracking-widest text-gothic-crimson drop-shadow-[0_0_5px_rgba(220,38,38,0.3)]">Browse the archives</p>
           <h2 className="font-display text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            What tools shall we <span className="text-gothic-purple filter drop-shadow-[0_0_8px_rgba(139,92,246,0.4)]">summon</span> today?
+            What tools shall we <span className="text-gothic-crimson filter drop-shadow-[0_0_8px_rgba(220,38,38,0.4)]">summon</span> today?
           </h2>
         </div>
 

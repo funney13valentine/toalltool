@@ -3,10 +3,10 @@
 @theme {
   --color-gothic-dark: #09070f;
   --color-gothic-card: #120f1d;
-  --color-gothic-border: #2d224d;
-  --color-gothic-purple: #8b5cf6;
-  --color-gothic-accent: #a78bfa;
-  --color-gothic-magenta: #ec4899;
+  --color-gothic-border: #451414;
+  --color-gothic-crimson: #dc2626;
+  --color-gothic-accent: #f87171;
+  --color-gothic-rose: #f43f5e;
   --font-display: var(--font-pirata), system-ui, sans-serif;
   --font-body: var(--font-cinzel), Georgia, serif;
 }
@@ -14,7 +14,7 @@
 :root {
   --background: #09070f;
   --foreground: #e2e8f0;
-  --accent: #8b5cf6;
+  --accent: #dc2626;
 }
 
 * {
@@ -39,16 +39,16 @@ body {
   background: #09070f;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2d224d;
+  background: #451414;
   border: 2px solid #09070f;
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #8b5cf6;
+  background: #dc2626;
 }
 
 ::selection {
-  background: #4c1d95;
+  background: #7f1d1d;
   color: #ffffff;
 }
 
@@ -63,9 +63,9 @@ a {
 .page-bg {
   background-color: #09070f;
   background-image:
-    radial-gradient(circle at 12% 18%, rgba(139, 92, 246, 0.15) 0%, transparent 45%),
-    radial-gradient(circle at 88% 12%, rgba(236, 72, 153, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 72% 82%, rgba(76, 29, 149, 0.2) 0%, transparent 45%),
+    radial-gradient(circle at 12% 18%, rgba(220, 38, 38, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 88% 12%, rgba(244, 63, 94, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 72% 82%, rgba(127, 29, 29, 0.2) 0%, transparent 45%),
     radial-gradient(circle at 28% 78%, rgba(220, 38, 38, 0.05) 0%, transparent 35%);
 }
 
@@ -103,11 +103,11 @@ a {
   0%,
   100% {
     opacity: 1;
-    filter: drop-shadow(0 0 2px rgba(139, 92, 246, 0.3));
+    filter: drop-shadow(0 0 2px rgba(220, 38, 38, 0.3));
   }
   50% {
     opacity: 0.75;
-    filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.8));
+    filter: drop-shadow(0 0 10px rgba(220, 38, 38, 0.8));
   }
 }
 
@@ -181,7 +181,7 @@ a {
 }
 
 .card-shadow-hover:hover {
-  box-shadow: 0 10px 40px rgba(139, 92, 246, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 40px rgba(220, 38, 38, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.1);
 }
 
 @media (prefers-reduced-motion: reduce) {

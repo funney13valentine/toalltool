@@ -35,7 +35,7 @@ export default function Header() {
       className="sticky top-0 z-50 transition-all duration-300"
       style={{
         backgroundColor: `rgba(9, 7, 15, ${headerBgOpacity})`,
-        borderColor: `rgba(45, 34, 77, ${headerBorderOpacity})`,
+        borderColor: `rgba(69, 20, 20, ${headerBorderOpacity})`,
         borderBottomWidth: "1px",
         backdropFilter: isHome && scrollY < 50 ? "none" : "blur(12px)",
         boxShadow: isHome && scrollY < 150 ? "none" : "0 10px 30px rgba(0, 0, 0, 0.3)",
@@ -60,30 +60,31 @@ export default function Header() {
             id="header-text-slot"
             className="font-display text-xl font-extrabold tracking-tight text-white sm:text-2xl"
           >
-            ToAll<span className="text-gothic-purple">Tool</span>
+            ToAll<span className="text-gothic-crimson">Tool</span>
           </span>
         </Link>
         <nav 
           className="flex items-center gap-2 text-sm font-bold sm:gap-4 sm:text-base"
           style={{ 
             opacity: navOpacity,
+            verticalAlign: "middle",
             visibility: navOpacity === 0 ? "hidden" : "visible",
             transition: "opacity 0.2s ease, visibility 0.2s"
           }}
         >
           <Link
             href="/"
-            className="group relative rounded-full px-3 py-2 text-slate-300 transition hover:text-gothic-purple hover:drop-shadow-[0_0_8px_rgba(139,92,246,0.5)] sm:px-4"
+            className="group relative rounded-full px-3 py-2 text-slate-300 transition hover:text-gothic-crimson hover:drop-shadow-[0_0_8px_rgba(220,38,38,0.5)] sm:px-4"
           >
             Home
-            <span className="absolute bottom-0 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-gothic-purple transition-all group-hover:w-3/4 shadow-[0_0_8px_#8b5cf6]" />
+            <span className="absolute bottom-0 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-gothic-crimson transition-all group-hover:w-3/4 shadow-[0_0_8px_#dc2626]" />
           </Link>
           <a
             href="#about"
-            className="group relative rounded-full px-3 py-2 text-slate-300 transition hover:text-gothic-purple hover:drop-shadow-[0_0_8px_rgba(139,92,246,0.5)] sm:px-4"
+            className="group relative rounded-full px-3 py-2 text-slate-300 transition hover:text-gothic-crimson hover:drop-shadow-[0_0_8px_rgba(220,38,38,0.5)] sm:px-4"
           >
             About
-            <span className="absolute bottom-0 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-gothic-purple transition-all group-hover:w-3/4 shadow-[0_0_8px_#8b5cf6]" />
+            <span className="absolute bottom-0 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-gothic-crimson transition-all group-hover:w-3/4 shadow-[0_0_8px_#dc2626]" />
           </a>
         </nav>
       </div>

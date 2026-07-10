@@ -16,7 +16,7 @@ export default function TermsPage() {
         </div>
 
         <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-sm text-slate-400">
-          <Link href="/" className="font-medium transition hover:text-gothic-purple">
+          <Link href="/" className="font-medium transition hover:text-gothic-crimson">
             Home
           </Link>
           <span aria-hidden="true">/</span>
@@ -24,9 +24,9 @@ export default function TermsPage() {
         </nav>
 
         <header className="mb-10 text-center sm:text-left border-b border-gothic-border/40 pb-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-gothic-purple drop-shadow-[0_0_5px_rgba(139,92,246,0.3)]">Sacred Covenant</p>
+          <p className="text-sm font-bold uppercase tracking-widest text-gothic-crimson drop-shadow-[0_0_5px_rgba(220,38,38,0.3)]">Sacred Covenant</p>
           <h1 className="font-display mt-1 text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
-            Terms of <span className="text-gothic-purple filter drop-shadow-[0_0_8px_rgba(139,92,246,0.4)]">Summoning</span>
+            Terms of <span className="text-gothic-crimson filter drop-shadow-[0_0_8px_rgba(220,38,38,0.4)]">Summoning</span>
           </h1>
           <p className="mt-2 text-sm text-slate-400">Please read these rules before utilising our tool sanctuary.</p>
         </header>
@@ -71,7 +71,7 @@ export default function TermsPage() {
         <div className="mt-12 pt-8 border-t border-gothic-border/40 text-center">
           <Link
             href="/"
-            className="font-display inline-flex items-center gap-2 rounded-xl bg-gothic-purple px-6 py-3 text-sm font-bold text-white transition-all hover:scale-[1.02] hover:bg-gothic-purple/85 shadow-[0_4px_12px_rgba(139,92,246,0.15)]"
+            className="font-display inline-flex items-center gap-2 rounded-xl bg-gothic-crimson px-6 py-3 text-sm font-bold text-white transition-all hover:scale-[1.02] hover:bg-gothic-crimson/85 shadow-[0_4px_12px_rgba(220,38,38,0.15)]"
           >
             ← Return to Sanctuary
           </Link>

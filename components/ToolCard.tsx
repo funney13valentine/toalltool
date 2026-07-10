@@ -13,17 +13,17 @@ export default function ToolCard({ tool }: { tool: Tool }) {
   const ctaText = pickFromSeed(tool.id + "-cta", CTA_TEXTS);
 
   const tagStyles = [
-    "bg-purple-950/30 text-purple-300 border border-purple-900/30",
-    "bg-indigo-950/30 text-indigo-300 border border-indigo-900/30",
+    "bg-red-950/30 text-red-300 border border-red-900/30",
+    "bg-orange-950/30 text-orange-300 border border-orange-900/30",
     "bg-rose-950/30 text-rose-300 border border-rose-900/30",
-    "bg-fuchsia-950/30 text-fuchsia-300 border border-fuchsia-900/30",
+    "bg-amber-950/30 text-amber-300 border border-amber-900/30",
   ];
 
   return (
     <article className="group flex h-full flex-col rounded-2xl border border-gothic-border/60 bg-gothic-card/60 p-5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 sm:p-6 card-shadow card-shadow-hover">
       <div className="mb-4 flex items-start justify-between gap-4">
         <div
-          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gothic-dark border border-gothic-border/60 text-xl transition-transform group-hover:rotate-12 group-hover:scale-110 group-hover:border-gothic-purple/40"
+          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gothic-dark border border-gothic-border/60 text-xl transition-transform group-hover:rotate-12 group-hover:scale-110 group-hover:border-gothic-crimson/40"
           aria-hidden="true"
         >
           {emoji}
@@ -46,7 +46,7 @@ export default function ToolCard({ tool }: { tool: Tool }) {
         href={tool.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="font-display mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gothic-purple px-4 py-3 text-sm font-bold text-white transition-all hover:scale-[1.02] hover:bg-gothic-purple/85 focus:outline-none focus:ring-4 focus:ring-gothic-purple/20 shadow-[0_4px_12px_rgba(139,92,246,0.15)] hover:shadow-[0_4px_18px_rgba(139,92,246,0.3)]"
+        className="font-display mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gothic-crimson px-4 py-3 text-sm font-bold text-white transition-all hover:scale-[1.02] hover:bg-gothic-crimson/85 focus:outline-none focus:ring-4 focus:ring-gothic-crimson/20 shadow-[0_4px_12px_rgba(220,38,38,0.15)] hover:shadow-[0_4px_18px_rgba(220,38,38,0.3)]"
       >
         {ctaText} <span aria-hidden="true">→</span>
       </a>

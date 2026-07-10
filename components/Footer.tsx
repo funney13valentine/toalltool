@@ -6,23 +6,23 @@ export default function Footer() {
       <div className="mx-auto max-w-[1200px] px-5 py-9 sm:px-6">
         <div className="mb-5 text-center sm:text-left">
           <p className="font-display text-lg font-extrabold text-white">
-            ToAll<span className="text-gothic-purple">Tool</span> <span aria-hidden="true">🔮</span>
+            ToAll<span className="text-gothic-crimson">Tool</span> <span aria-hidden="true">🔮</span>
           </p>
           <p className="mt-1 text-sm text-slate-500">Summoning tools since antiquity. All in one place.</p>
         </div>
         <div className="flex flex-col gap-4 text-sm font-medium sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} ToAllTool</p>
           <div className="flex flex-wrap gap-x-5 gap-y-2">
-            <Link href="/terms" className="transition hover:text-gothic-purple hover:drop-shadow-[0_0_5px_#8b5cf6]">
+            <Link href="/terms" className="transition hover:text-gothic-crimson hover:drop-shadow-[0_0_5px_#dc2626]">
               Terms
             </Link>
-            <Link href="/privacy" className="transition hover:text-gothic-purple hover:drop-shadow-[0_0_5px_#8b5cf6]">
+            <Link href="/privacy" className="transition hover:text-gothic-crimson hover:drop-shadow-[0_0_5px_#dc2626]">
               Privacy
             </Link>
-            <a href="#about" className="transition hover:text-gothic-purple hover:drop-shadow-[0_0_5px_#8b5cf6]">
+            <a href="#about" className="transition hover:text-gothic-crimson hover:drop-shadow-[0_0_5px_#dc2626]">
               About
             </a>
-            <a href="mailto:mx13eet@gmail.com" className="transition hover:text-gothic-purple hover:drop-shadow-[0_0_5px_#8b5cf6]">
+            <a href="mailto:mx13eet@gmail.com" className="transition hover:text-gothic-crimson hover:drop-shadow-[0_0_5px_#dc2626]">
               Contact
             </a>
           </div>
