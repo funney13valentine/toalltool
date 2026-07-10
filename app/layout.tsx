@@ -1,13 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Pirata_One, Cinzel } from "next/font/google";
+import { Inter, Cinzel } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import "./globals.css";
 
-const pirataOne = Pirata_One({
+const inter = Inter({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-pirata",
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -30,7 +29,7 @@ export const viewport: Viewport = { width: "device-width", initialScale: 1, them
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${pirataOne.variable} ${cinzel.variable}`}>
+    <html lang="en" className={`${inter.variable} ${cinzel.variable}`}>
       <body className="page-bg flex min-h-screen flex-col">
         <Header />
         {children}

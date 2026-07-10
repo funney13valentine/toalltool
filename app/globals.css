@@ -3,18 +3,18 @@
 @theme {
   --color-gothic-dark: #09070f;
   --color-gothic-card: #120f1d;
-  --color-gothic-border: #451414;
-  --color-gothic-crimson: #dc2626;
-  --color-gothic-accent: #f87171;
-  --color-gothic-rose: #f43f5e;
-  --font-display: var(--font-pirata), system-ui, sans-serif;
-  --font-body: var(--font-cinzel), Georgia, serif;
+  --color-gothic-border: #082f25;
+  --color-gothic-emerald: #10b981;
+  --color-gothic-accent: #34d399;
+  --color-gothic-teal: #0d9488;
+  --font-display: var(--font-cinzel), Georgia, serif;
+  --font-body: var(--font-inter), system-ui, sans-serif;
 }
 
 :root {
   --background: #09070f;
   --foreground: #e2e8f0;
-  --accent: #dc2626;
+  --accent: #10b981;
 }
 
 * {
@@ -39,16 +39,16 @@ body {
   background: #09070f;
 }
 ::-webkit-scrollbar-thumb {
-  background: #451414;
+  background: #082f25;
   border: 2px solid #09070f;
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #dc2626;
+  background: #10b981;
 }
 
 ::selection {
-  background: #7f1d1d;
+  background: #064e3b;
   color: #ffffff;
 }
 
@@ -63,10 +63,10 @@ a {
 .page-bg {
   background-color: #09070f;
   background-image:
-    radial-gradient(circle at 12% 18%, rgba(220, 38, 38, 0.15) 0%, transparent 45%),
-    radial-gradient(circle at 88% 12%, rgba(244, 63, 94, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 72% 82%, rgba(127, 29, 29, 0.2) 0%, transparent 45%),
-    radial-gradient(circle at 28% 78%, rgba(220, 38, 38, 0.05) 0%, transparent 35%);
+    radial-gradient(circle at 12% 18%, rgba(16, 185, 129, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 88% 12%, rgba(13, 148, 136, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 72% 82%, rgba(6, 78, 59, 0.2) 0%, transparent 45%),
+    radial-gradient(circle at 28% 78%, rgba(16, 185, 129, 0.05) 0%, transparent 35%);
 }
 
 @keyframes float {
@@ -103,11 +103,11 @@ a {
   0%,
   100% {
     opacity: 1;
-    filter: drop-shadow(0 0 2px rgba(220, 38, 38, 0.3));
+    filter: drop-shadow(0 0 2px rgba(16, 185, 129, 0.3));
   }
   50% {
     opacity: 0.75;
-    filter: drop-shadow(0 0 10px rgba(220, 38, 38, 0.8));
+    filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.8));
   }
 }
 
@@ -181,7 +181,7 @@ a {
 }
 
 .card-shadow-hover:hover {
-  box-shadow: 0 10px 40px rgba(220, 38, 38, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 40px rgba(16, 185, 129, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.1);
 }
 
 @media (prefers-reduced-motion: reduce) {

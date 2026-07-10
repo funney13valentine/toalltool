@@ -16,7 +16,7 @@ export default function PrivacyPage() {
         </div>
 
         <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-2 text-sm text-slate-400">
-          <Link href="/" className="font-medium transition hover:text-gothic-crimson">
+          <Link href="/" className="font-medium transition hover:text-gothic-emerald">
             Home
           </Link>
           <span aria-hidden="true">/</span>
@@ -24,9 +24,9 @@ export default function PrivacyPage() {
         </nav>
 
         <header className="mb-10 text-center sm:text-left border-b border-gothic-border/40 pb-6">
-          <p className="text-sm font-bold uppercase tracking-widest text-gothic-crimson drop-shadow-[0_0_5px_rgba(220,38,38,0.3)]">Sacred Shield</p>
+          <p className="text-sm font-bold uppercase tracking-widest text-gothic-emerald drop-shadow-[0_0_5px_rgba(16,185,129,0.3)]">Sacred Shield</p>
           <h1 className="font-display mt-1 text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
-            Privacy <span className="text-gothic-crimson filter drop-shadow-[0_0_8px_rgba(220,38,38,0.4)]">Covenant</span>
+            Privacy <span className="text-gothic-emerald filter drop-shadow-[0_0_8px_rgba(16,185,129,0.4)]">Covenant</span>
           </h1>
           <p className="mt-2 text-sm text-slate-400">How we guard the sanctity of your digital presence.</p>
         </header>
@@ -66,7 +66,7 @@ export default function PrivacyPage() {
               If you have queries or seek clarification regarding this Privacy Covenant, you may summon us directly by electronic dispatch at:{" "}
               <a
                 href="mailto:mx13eet@gmail.com"
-                className="text-gothic-crimson font-semibold hover:underline hover:drop-shadow-[0_0_5px_rgba(220,38,38,0.5)]"
+                className="text-gothic-emerald font-semibold hover:underline hover:drop-shadow-[0_0_5px_rgba(16,185,129,0.5)]"
               >
                 mx13eet@gmail.com
               </a>
@@ -77,7 +77,7 @@ export default function PrivacyPage() {
         <div className="mt-12 pt-8 border-t border-gothic-border/40 text-center">
           <Link
             href="/"
-            className="font-display inline-flex items-center gap-2 rounded-xl bg-gothic-crimson px-6 py-3 text-sm font-bold text-white transition-all hover:scale-[1.02] hover:bg-gothic-crimson/85 shadow-[0_4px_12px_rgba(220,38,38,0.15)]"
+            className="font-display inline-flex items-center gap-2 rounded-xl bg-gothic-emerald px-6 py-3 text-sm font-bold text-white transition-all hover:scale-[1.02] hover:bg-gothic-emerald/85 shadow-[0_4px_12px_rgba(16,185,129,0.15)]"
           >
             ← Return to Sanctuary
           </Link>

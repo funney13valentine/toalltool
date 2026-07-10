@@ -14,12 +14,12 @@ export default function CategoryCard({
 
   // Subtle colored gothic glows and borders for each card index to maintain the playful variety!
   const gothicAccents = [
-    { text: "text-red-400", border: "border-red-900/40", hoverBorder: "group-hover:border-red-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(239,68,68,0.15)]", bg: "bg-red-950/20" },
-    { text: "text-rose-400", border: "border-rose-900/40", hoverBorder: "group-hover:border-rose-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(244,63,94,0.15)]", bg: "bg-rose-950/20" },
-    { text: "text-orange-400", border: "border-orange-900/40", hoverBorder: "group-hover:border-orange-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(249,115,22,0.15)]", bg: "bg-orange-950/20" },
-    { text: "text-amber-400", border: "border-amber-900/40", hoverBorder: "group-hover:border-amber-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(245,158,11,0.15)]", bg: "bg-amber-950/20" },
-    { text: "text-pink-400", border: "border-pink-900/40", hoverBorder: "group-hover:border-pink-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(236,72,153,0.15)]", bg: "bg-pink-950/20" },
     { text: "text-emerald-400", border: "border-emerald-900/40", hoverBorder: "group-hover:border-emerald-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(16,185,129,0.15)]", bg: "bg-emerald-950/20" },
+    { text: "text-teal-400", border: "border-teal-900/40", hoverBorder: "group-hover:border-teal-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(20,184,166,0.15)]", bg: "bg-teal-950/20" },
+    { text: "text-lime-400", border: "border-lime-900/40", hoverBorder: "group-hover:border-lime-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(132,204,22,0.15)]", bg: "bg-lime-950/20" },
+    { text: "text-amber-400", border: "border-amber-900/40", hoverBorder: "group-hover:border-amber-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(245,158,11,0.15)]", bg: "bg-amber-950/20" },
+    { text: "text-orange-400", border: "border-orange-900/40", hoverBorder: "group-hover:border-orange-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(249,115,22,0.15)]", bg: "bg-orange-950/20" },
+    { text: "text-cyan-400", border: "border-cyan-900/40", hoverBorder: "group-hover:border-cyan-500/60", hoverShadow: "group-hover:shadow-[0_0_20px_rgba(6,182,212,0.15)]", bg: "bg-cyan-950/20" },
   ];
   
   const accent = gothicAccents[index % gothicAccents.length];
@@ -40,7 +40,7 @@ export default function CategoryCard({
       <div className="mt-5 flex items-center justify-between">
         <span className={`text-sm font-bold ${accent.text}`}>{toolCount} summoned tools</span>
         <span
-          className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-800 text-slate-400 transition-all group-hover:translate-x-0.5 group-hover:bg-gothic-crimson group-hover:text-white group-hover:shadow-[0_0_10px_#dc2626]"
+          className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-800 text-slate-400 transition-all group-hover:translate-x-0.5 group-hover:bg-gothic-emerald group-hover:text-white group-hover:shadow-[0_0_10px_#10b981]"
           aria-hidden="true"
         >
           →

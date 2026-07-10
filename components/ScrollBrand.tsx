@@ -133,8 +133,8 @@ export default function ScrollBrand() {
           height: coords.heroText.height,
         }}
       >
-        <span className="whitespace-nowrap font-extrabold tracking-tight text-white drop-shadow-[0_0_15px_rgba(220,38,38,0.5)] select-none text-[60px] sm:text-[100px] md:text-[150px] lg:text-[200px] leading-none">
-          ToAll<span className="text-[#dc2626] filter drop-shadow-[0_0_8px_#f87171]">Tool</span>
+        <span className="whitespace-nowrap font-extrabold tracking-tight text-white drop-shadow-[0_0_15px_rgba(16,185,129,0.5)] select-none text-[60px] sm:text-[100px] md:text-[150px] lg:text-[200px] leading-none">
+          ToAll<span className="text-[#10b981] filter drop-shadow-[0_0_8px_#34d399]">Tool</span>
         </span>
       </div>
     </>
