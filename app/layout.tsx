@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   openGraph: { title: "ToAllTool | Online Tools, Organized", description: "Find trusted online tools for every task, all in one place.", type: "website", siteName: "ToAllTool" },
   twitter: { card: "summary", title: "ToAllTool | Online Tools, Organized", description: "Find trusted online tools for every task, all in one place." },
   robots: { index: true, follow: true },
+  other: {
+    "google-adsense-account": "ca-pub-1077482727586246",
+  },
 };
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#09070f" };
