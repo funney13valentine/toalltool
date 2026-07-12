@@ -34,15 +34,12 @@ export const viewport: Viewport = { width: "device-width", initialScale: 1, them
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${inter.variable} ${cinzel.variable}`}>
-      <head>
+      <body className="page-bg flex min-h-screen flex-col">
         <Script
-          async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1077482727586246"
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
-      </head>
-      <body className="page-bg flex min-h-screen flex-col">
         <Header />
         {children}
         <Footer />
