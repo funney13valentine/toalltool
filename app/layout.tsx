@@ -40,6 +40,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+        <script src="https://5gvci.com/act/files/tag.min.js?z=11300469" data-cfasync="false" async></script>
         <Header />
         {children}
         <Footer />
