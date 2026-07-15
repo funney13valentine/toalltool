@@ -41,6 +41,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           strategy="afterInteractive"
         />
         <script src="https://5gvci.com/act/files/tag.min.js?z=11300469" data-cfasync="false" async></script>
+        <script dangerouslySetInnerHTML={{ __html: `(function(s){s.dataset.zone='11300472',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))` }} />
+        <script src="https://quge5.com/88/tag.min.js" data-zone="259855" async data-cfasync="false"></script>
         <Header />
         {children}
         <Footer />
